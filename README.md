@@ -1,6 +1,6 @@
 # PhysicsSIM
 
-**PhysicsSIM** This project was developed for my Physics course, featuring a collection of Python-based simulations covering key topics from the curriculum. The interactive simulations model fundamental physical phenomena studied throughout the semester.
+This project was developed for my Physics course, featuring a collection of Python-based simulations covering key topics from the curriculum. The interactive simulations model fundamental physical phenomena studied throughout the semester.
 
 ---
 
