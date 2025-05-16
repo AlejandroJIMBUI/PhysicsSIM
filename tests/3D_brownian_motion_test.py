@@ -6,7 +6,6 @@ N = 1000     # Número de pasos
 dt = 0.1     # Paso de tiempo (no used in this simple simulation)
 sigma = 0.5  # Desviación estándar del paso
 
-# Crear ventana 3D
 scene = canvas(title='Movimiento Browniano 3D',
                width=800, height=600,
                center=vector(0,0,0),

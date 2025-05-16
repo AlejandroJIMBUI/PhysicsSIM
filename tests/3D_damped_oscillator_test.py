@@ -15,7 +15,6 @@ N = len(t)
 x = [x0]
 v = [v0]
 
-# Crear ventana 3D
 scene = canvas(title='Oscilador Amortiguado 3D',
                width=800, height=600,
                center=vector(0,0,0),

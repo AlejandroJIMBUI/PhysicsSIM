@@ -7,7 +7,6 @@ N = 20              # Número de partículas
 radio = 0.5         # Radio de las partículas
 max_vel = 5.0       # Velocidad máxima inicial
 
-# Crear escena
 scene = canvas(width=800, height=600, range=L)
 pared = box(pos=vector(0, 0, 0), size=vector(L, L, 0.1), color=color.blue, opacity=0.2)
 
@@ -24,7 +23,6 @@ for _ in range(N):
     particula.velocidad = vel
     particulas.append(particula)
 
-# Bucle de simulación
 dt = 0.01
 while True:
     rate(100)
