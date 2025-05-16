@@ -43,7 +43,7 @@
    ```bash
    python -m venv venv
    venv\Scripts\activate
-   pip 
+   pip install -r requirements.txt
 3. Running Unit Tests
    ```bash
    pytest
