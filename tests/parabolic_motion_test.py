@@ -14,36 +14,36 @@ def runge_kutta4(f, y0, t):
         y[i] = y[i-1] + (h / 6) * (k1 + 2*k2 + 2*k3 + k4)
     return y
 
-# Parámetros
-v0 = 20.0    # Velocidad inicial (m/s)
-theta = 45   # Ángulo de lanzamiento (grados)
-g = 9.81     # Gravedad (m/s²)
-t_max = 3.0  # Tiempo máximo (s)
-dt = 0.01    # Paso de tiempo (s)
+# Parameters
+v0 = 20.0    # Vinitial velocity (m/s)
+theta = 45   # Launch angle (grades)
+g = 9.81     # Gravity (m/s²)
+t_max = 3.0  # Maximum time (s)
+dt = 0.01    # Passage of time (s)
 
-# Condiciones iniciales
+# Initial conditions
 vy0 = v0 * np.sin(np.radians(theta))
 vx0 = v0 * np.cos(np.radians(theta))
 y0 = [0, vx0, 0, vy0]  # [x, vx, y, vy]
 
-# Sistema de ecuaciones
+# System of equations
 def derivadas(y, t):
     return [y[1], 0, y[3], -g]
 
-# Simulación
+# Simulation
 t = np.arange(0, t_max, dt)
 sol = runge_kutta4(derivadas, y0, t)
 
-# Resultados
+# Results
 x = sol[:, 0]
 y = sol[:, 2]
 
-# Gráfico
+# Graphic
 plt.figure(figsize=(8, 6))
 plt.plot(x, y, 'g-', linewidth=2)
-plt.title("Trayectoria de un Proyectil")
-plt.xlabel("Distancia Horizontal (m)")
-plt.ylabel("Altura (m)")
+plt.title("Trajectory of a Projectile")
+plt.xlabel("Horizontal Distance (m)")
+plt.ylabel("Height (m)")
 plt.grid(True)
 plt.axis('equal')
 plt.show()

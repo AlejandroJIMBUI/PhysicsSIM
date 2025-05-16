@@ -1,32 +1,32 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Cargar datos desde archivo
+# Load data from file
 data = np.loadtxt('data/datos.txt', skiprows=1)
 
 tiempo = data[:, 0]
 altura = data[:, 1]
 experimental = data[:, 2]
 
-# Calcular margen de error
+# Calculate margin of error
 error = np.abs(altura - experimental)
 
-# Graficar datos
+# Graphing data
 plt.figure(figsize=(12, 6))
 
-plt.plot(tiempo, altura, 'o-', label='Altura (m)')
+plt.plot(tiempo, altura, 'o-', label='Height (m)')
 plt.plot(tiempo, experimental, 's-', label='Experimental')
 
-# Conectar puntos de altura con experimental
+# Connect height points with experimental
 for i in range(len(tiempo)):
     plt.plot([tiempo[i], tiempo[i]], [altura[i], experimental[i]], 'k--', alpha=0.5)
 
-# Graficar margen de error como barra de error
-plt.errorbar(tiempo, altura, yerr=error, fmt='o', ecolor='gray', alpha=0.5, label='Margen de error')
+# Plot margin of error as error bar
+plt.errorbar(tiempo, altura, yerr=error, fmt='o', ecolor='gray', alpha=0.5, label='Margin of error')
 
-plt.title('Datos de Altura y Experimental vs Tiempo con Margen de Error')
-plt.xlabel('Tiempo (s)')
-plt.ylabel('Altura / Experimental')
+plt.title('Height and Experimental Data vs Time with Margin of Error')
+plt.xlabel('Time (s)')
+plt.ylabel('Height / Experimental')
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
