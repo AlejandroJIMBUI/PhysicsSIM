@@ -9,7 +9,7 @@ v0 = 0.0     # Velocidad inicial (m/s)
 t_max = 20.0 # Tiempo máximo (s)
 dt = 0.01    # Paso de tiempo (s)
 
-# Inicialización
+# Inicializaciónw
 t = np.arange(0, t_max + dt, dt)
 x = np.zeros_like(t)
 v = np.zeros_like(t)
